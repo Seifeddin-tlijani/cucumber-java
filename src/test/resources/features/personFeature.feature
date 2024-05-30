@@ -4,13 +4,11 @@ Feature: Person testing feature
         Given Static method to Initalize a list of persons
         When I connect I can see the size of thz Initalized persons
         Then the list size is equal to 5
-
-
-#    ## Create a new person with random entries
-#    Scenario: Create a new person
-#        Given the list of person contains 5 persons already stored
-#        When I create a new person with random entrie
-#        Then I get the ID of the new person and the list contains more than 5 persons
+    ## Create a new person with random entries
+    Scenario: Create a new person
+        Given the list of person contains 5 persons already stored
+        When I create a new person with random entrie
+        Then I get the ID of the new person and the list contains more than 5 persons
 #
 #
 #    ## Person Bulk creation
