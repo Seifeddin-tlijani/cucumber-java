@@ -17,14 +17,14 @@ Feature: Person testing feature
         When I create a new person with <FirstName> and <LastName> and <Age>
         Then I get the ID of the new person and the list contains more than 5 persons
 
-#        Examples:
-#            | FirstName | LastName | Age |
-#            | Seif      | Tlijani  | 21  |
-#            | john      | Doe      | 30  |
-#            | mark      | Depon    | 40  |
-#            | Amina     | Slim     | 22  |
-#            | Mohamed   | Belhadj  | 21  |
-#
+        Examples:
+            | FirstName | LastName | Age |
+            | Seif      | Tlijani  | 21  |
+            | john      | Doe      | 30  |
+            | mark      | Depon    | 40  |
+            | Amina     | Slim     | 22  |
+            | Mohamed   | Belhadj  | 21  |
+
 #    ## Updating an existing person
 #    Scenario Outline: Update a person by ID
 #        When The Lits of persons contains 5 persons already stored
