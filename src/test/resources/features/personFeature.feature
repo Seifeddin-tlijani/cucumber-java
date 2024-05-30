@@ -25,20 +25,20 @@ Feature: Person testing feature
             | Amina     | Slim     | 22  |
             | Mohamed   | Belhadj  | 21  |
 
-#    ## Updating an existing person
-#    Scenario Outline: Update a person by ID
-#        When The Lits of persons contains 5 persons already stored
-#        When I Update a person data with <ID> and <FirstName> and <LastName> and <Age>
-#        Then I get the person updated
-#
-#        Examples:
-#            | ID | FirstName | LastName | Age     |
-#            | 1  | Seif      | Tlijani1 | 22      |
-#            | 2  | john      | Doe1     | 23      |
-#            | 3  | mark      | Depon1   | 30      |
-#            | 4  | Amina     | Slim1    | 35      |
-#            | 5  | Mohamed   | Belhadj1 | 37      |
-#
+    ## Updating an existing person
+    Scenario Outline: Update a person by ID
+        When The Lits of persons contains 5 persons already stored
+        When I Update a person data with <ID> and <FirstName> and <LastName> and <Age>
+        Then I get the person updated
+
+        Examples:
+            | ID | FirstName | LastName | Age     |
+            | 1  | Seif      | Tlijani1 | 22      |
+            | 2  | john      | Doe1     | 23      |
+            | 3  | mark      | Depon1   | 30      |
+            | 4  | Amina     | Slim1    | 35      |
+            | 5  | Mohamed   | Belhadj1 | 37      |
+
 #    ## Delete an existing person
 #    Scenario: Delete a given person
 #        Given Start to type your Given step here
