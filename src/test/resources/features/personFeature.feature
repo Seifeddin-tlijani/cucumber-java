@@ -39,16 +39,16 @@ Feature: Person testing feature
             | 4  | Amina     | Slim1    | 35      |
             | 5  | Mohamed   | Belhadj1 | 37      |
 
-#    ## Delete an existing person
-#    Scenario: Delete a given person
-#        Given Start to type your Given step here
-#        When I delete a person with Id "1"
-#        Then the given person is deleted and the list size is equal to "4"
-#
-#
-#
-#
-#
-#
-#
+    ## Delete an existing person
+    Scenario: Delete a given person
+        Given Start to type your Given step here
+        When I delete a person with Id "1"
+        Then the given person is deleted and the list size is equal to "4"
+
+
+
+
+
+
+
 
