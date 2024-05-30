@@ -9,14 +9,14 @@ Feature: Person testing feature
         Given the list of person contains 5 persons already stored
         When I create a new person with random entrie
         Then I get the ID of the new person and the list contains more than 5 persons
-#
-#
-#    ## Person Bulk creation
-#    Scenario Outline: Person Bulk creation
-#        Given the list of person contains 5 persons already stored
-#        When I create a new person with <FirstName> and <LastName> and <Age>
-#        Then I get the ID of the new person and the list contains more than 5 persons
-#
+
+
+    ## Person Bulk creation
+    Scenario Outline: Person Bulk creation
+        Given the list of person contains 5 persons already stored
+        When I create a new person with <FirstName> and <LastName> and <Age>
+        Then I get the ID of the new person and the list contains more than 5 persons
+
 #        Examples:
 #            | FirstName | LastName | Age |
 #            | Seif      | Tlijani  | 21  |
