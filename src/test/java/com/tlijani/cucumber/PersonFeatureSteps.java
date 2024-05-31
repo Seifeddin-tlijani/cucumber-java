@@ -58,7 +58,23 @@ public class PersonFeatureSteps {
         Assert.assertNotNull(savedPerson.getId());
     }
 
-    //Bulk
+    //Bulk creation
+    @When("^I create a new person with (.*), (.*), and (\\d+)$")
+    public void when_i_create_new_person_with_given_data(String firstName , String lastName , int age){
+        Person newPerson = new Person();
+        newPerson.setFirstName(firstName);
+        newPerson.setLastName(lastName);
+        newPerson.setAge(age);
+        personService.save(newPerson);
+
+    }
+    @Then("^I get the ID of the new person and the list contains more than 5 persons$")
+    public void then_i_get_the_data_saved(){
+        findAllPersons();
+        Assert.assertTrue(personList.size()>5);
+    }
+
+
 
 
 

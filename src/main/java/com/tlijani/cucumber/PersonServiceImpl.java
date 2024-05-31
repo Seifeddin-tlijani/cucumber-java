@@ -25,6 +25,7 @@ public class PersonServiceImpl implements PersonService {
         if (person==null){
             return person;
         }
+        person.setId((long) (personList.size()+1));
         personList.add(person);
         return person;
     }
