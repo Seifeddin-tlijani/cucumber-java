@@ -1,3 +1,5 @@
+package com.tlijani.cucumber;
+
 import com.tlijani.cucumber.model.Person;
 
 import java.util.List;

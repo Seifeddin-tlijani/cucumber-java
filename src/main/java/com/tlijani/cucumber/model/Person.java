@@ -1,6 +1,16 @@
-package com.tlijani.cucumber.test.model;
+package com.tlijani.cucumber.model;
 
 public class Person {
+
+    private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     private String firstName;
     private String lastName;
@@ -9,7 +19,8 @@ public class Person {
     public Person() {
     }
 
-    public Person(String firstName, String lastName, int age) {
+    public Person(Long id, String firstName, String lastName, int age) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         Age = age;

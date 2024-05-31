@@ -1,3 +1,5 @@
+package com.tlijani.cucumber;
+
 import com.tlijani.cucumber.model.Person;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,7 +14,7 @@ public class PersonFeatureSteps {
     private List<Person> personList;
     private int personsInitSize = 0;
     private int personsInitSizeAfterSave = 0;
-
+    private Person savedPerson;
 
     @Given("^Static method to Initialize a list of persons$")
     public void initilize_a_list_of_persons(){
@@ -29,12 +31,13 @@ public class PersonFeatureSteps {
         Assert.assertEquals(5, personsInitSize);
     }
 
-    // implmenting Create person
+    // Implementing Create person
     @Given("^the list of persons contains 5 persons already stored$")
     public void list_contains_5_persons(){
         initPersonList();
-        personsInitSize=personList.size();
+        personsInitSize = personList.size();
     }
+
     @When("^I create a new person with random entry$")
     public void when_i_create_new_person_with_random_entries(){
         Person randomPerson = new Person();
@@ -47,15 +50,23 @@ public class PersonFeatureSteps {
         findAllPersons();
         personsInitSizeAfterSave = personList.size();
     }
+
     @Then("^I get the ID of the new person and the list contains more than 5 persons$")
     public void then_i_get_the_list(){
-        Assert.assertEquals(personsInitSizeAfterSave , 6);
+        Assert.assertEquals(personsInitSizeAfterSave, 6);
         Assert.assertNotNull(savedPerson);
+        Assert.assertNotNull(savedPerson.getId());
     }
+
+    //Bulk
+
+
+
     private void initPersonList(){
-        personList = this.personService.init();
+        personList = personService.init();
     }
+
     private void findAllPersons(){
-        personList=this.personService.findAll();
+        personList = personService.findAll();
     }
 }
